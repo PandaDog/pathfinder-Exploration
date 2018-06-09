@@ -4,7 +4,6 @@ __version__ = 0.1
 __copyright__ = "All Rights Reserved"
 __email__ = "rgmckay@nevada.unr.edu"
 
-
 #TODO
 #1. Change lists to a txt file to ease editing
 #2  Create output macro to insert Roll20 of the events (Excluding encounters)
@@ -12,11 +11,13 @@ __email__ = "rgmckay@nevada.unr.edu"
 #4  Develop the Dark Souls experience
 
 ##IMPORTS##
-import sys, random, math
+import sys, random, math, pprint
+
 
 ##GLOBALS##
 DAYS_TRAVELLED = 30
 THISISDARKSOULS = False
+
 
 ##Wanna add a fun weather? Add it here!
 WEATHERS = { ("Seventy degrees. The perfect day dawns accompanied by the most breathtaking sunrise you have ever seen. There is low humidity, clear blue skies with a cool island breeze. +2 morale bonus to all saving throws today!", 2), 
@@ -45,11 +46,20 @@ TERRAINS = { ("STANDARD", 80),
 
 ##Main Function
 def main():
-    MainFunc(THISISDARKSOULS)
+    MainFunc()
 
-def MainFunc(IsThisDarkSouls):
-    print("Hello welcome to the Tibaeria Random DC Explorer, Please plot your course carefully as to not cause any issues. Another suggestion is to only pre-roll their intended undiscovered")
-    print("Have an adventuring idea for a party to encounter? Wanna set the mood? Try altering weights of these events! Ex. Near a everlasting storm, have the party encounter increased hurricane chances.")
+
+
+def MainFunc():
+    Bulk_Adventure()
+    raw_input("Press enter to exit. . .")
+
+
+
+## HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS #####
+
+##MODES
+def Bulk_Adventure():
     playerCount = int(input("Please Input Number of Players: "))
     exploredCount = int(input("Input number of explored hexes: "))
     unknownHexCount = int(input("Input number of unexplored hexes: "))
@@ -66,45 +76,48 @@ def MainFunc(IsThisDarkSouls):
         unknownHexCount -= 1
 
     print("ADVENTURE COMPLETE")
-    playerCount = input("Press any key to exit. . .")
 
-## HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS ####### HELPER FUNCTIONS #####
+
 
 def Travel_Explored(NumOfPlayers):
     weather = Handle_Weather()
-    encounters = Handle_Encounters(3, NumOfPlayers)
+    encounters = Handle_Encounters(3, NumOfPlayers, "Standard")
     Create_Day_Writeup_Explored(weather, encounters)
 
 def Travel_UnExplored(NumOfPlayers):
     weather = Handle_Weather()
     terrain = Handle_Unexplored()
-    encounters = Handle_Encounters(6, NumOfPlayers)
+    encounters = Handle_Encounters(6, NumOfPlayers, terrain)
     Create_Day_Writeup_Unexplored(weather, terrain, encounters)
 
 def Create_Day_Writeup_Unexplored(Weather, Terrain, Encounters):
-    print(Weather)
-    print(Terrain)
+    Generate_Roll20_Macro_Complete(Weather[0],Terrain[0])
     if(Encounters != 0):
         print("ENCOUNTERS!")
-        print("P/D/C")
+        print("Player/Diff/Creature")
         print(Encounters)
     print("\n")
 
 def Create_Day_Writeup_Explored(Weather, Encounters):
-    print(Weather)
+    Generate_Roll20_Macro_Complete(Weather[0])
     if(Encounters != 0):
         print("ENCOUNTERS!")
-        print("P/D/C")
+        print("Player/Diff/Creature")
         print(Encounters)
     print("\n")
 
-def Handle_Encounters(NumberOfEncounters, numOfPlayers):
+def Handle_Encounters(NumberOfEncounters, numOfPlayers, terrain):
     random.seed
     Encounters = []
     actualEncounters = 0
+    encounterThreshold = 2
+
+    if(terrain == "Hunting Ground"):
+        encounterThreshold = 4
+
     while NumberOfEncounters > 0:
         EncounterVal = random.randint(1, 20)
-        if(EncounterVal <= 2):
+        if(EncounterVal <= encounterThreshold):
             actualEncounters +=  1
         NumberOfEncounters -= 1
     if actualEncounters > 0:
@@ -155,11 +168,17 @@ def Select_Event(Elements = []):
            break
     return returnElement
 
+##Example Macro &{template:default} {{name=Yharmem swings a rusty blade!}} {{Falchion:=[[d20cs>15+8]] vs AC}}  {{Damage:=[[2d4+11]]}} 
+def Generate_Roll20_Macro(message):
+    print("&{template:default} {{" + message + "}}" + '\n')
+
+def Generate_Roll20_Macro_Complete(Weather, Terrain = None):
+    if(Terrain != None):
+        print("&{template:default} {{name=Another Day on the DC}}{{"+Weather+"}}{{"+Terrain+"}}"+ '\n')
+    else:
+        print("&{template:default} {{name=Another Day on the DC}}{{"+Weather+"}}"+ '\n')
+
+
+
 if __name__ == '__main__':
   main()
-
-
-
-
-
-
