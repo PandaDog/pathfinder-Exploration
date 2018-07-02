@@ -117,19 +117,12 @@ def Handle_Encounters(NumberOfEncounters, numOfPlayers, terrain):
     obCount = 1
     specialModifiers = 0
 
-    if(obCount > 0):
-        roulette = random.randint(obCount, numOfPlayers)
-        if roulette <= obCount:
-            specialModifiers += 1
-    else:
-        specialModifiers = 0
-
     if(terrain == "Hunting Ground"):
         encounterThreshold = 4
 
     while NumberOfEncounters > 0:
         EncounterVal = random.randint(1, 20)
-        if(EncounterVal - specialModifiers <= encounterThreshold):
+        if(EncounterVal <= encounterThreshold):
             actualEncounters +=  1
         NumberOfEncounters -= 1
     if actualEncounters > 0:
