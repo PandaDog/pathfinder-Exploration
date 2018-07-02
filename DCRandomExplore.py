@@ -52,7 +52,7 @@ def main():
 
 def MainFunc():
     Bulk_Adventure()
-    raw_input("Press enter to exit. . .")
+    input("Press Enter to Exit")
 
 
 
@@ -64,16 +64,19 @@ def Bulk_Adventure():
     exploredCount = int(input("Input number of explored hexes: "))
     unknownHexCount = int(input("Input number of unexplored hexes: "))
 
-    print("Outputting Explored Hex Encounters \n")
-    #Iterate through all explored hex encounters first, then all unexplored
-    while exploredCount > 0:
-        Travel_Explored(playerCount)
-        exploredCount -= 1
 
-    print("Outputting Unexplored Hex Encounters \n")
-    while unknownHexCount > 0:
-        Travel_UnExplored(playerCount)
-        unknownHexCount -= 1
+    if(exploredCount != 0 or exploredCount < 0):
+        print("Outputting Explored Hex Encounters \n")
+    #Iterate through all explored hex encounters first, then all unexplored
+        while exploredCount > 0:
+            Travel_Explored(playerCount)
+            exploredCount -= 1
+
+    if(unknownHexCount != 0 or unknownHexCount < 0):
+        print("Outputting Unexplored Hex Encounters \n")
+        while unknownHexCount > 0:
+            Travel_UnExplored(playerCount)
+            unknownHexCount -= 1
 
     print("ADVENTURE COMPLETE")
 
@@ -111,13 +114,22 @@ def Handle_Encounters(NumberOfEncounters, numOfPlayers, terrain):
     Encounters = []
     actualEncounters = 0
     encounterThreshold = 2
+    obCount = 1
+    specialModifiers = 0
+
+    if(obCount > 0):
+        roulette = random.randint(obCount, numOfPlayers)
+        if roulette <= obCount:
+            specialModifiers += 1
+    else:
+        specialModifiers = 0
 
     if(terrain == "Hunting Ground"):
         encounterThreshold = 4
 
     while NumberOfEncounters > 0:
         EncounterVal = random.randint(1, 20)
-        if(EncounterVal <= encounterThreshold):
+        if(EncounterVal - specialModifiers <= encounterThreshold):
             actualEncounters +=  1
         NumberOfEncounters -= 1
     if actualEncounters > 0:
