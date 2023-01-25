@@ -1,0 +1,635 @@
+{
+    "problem": {
+        "restraints": [
+            "The government is cracking down on the conflict",
+            "One side seems invincibly stronger to the other",
+            "Both sides have “doomsday” info or devices",
+            "4 A prior conflict ended horribly for both of them",
+            "Foreign participants are keeping things tamped",
+            "Elements of both sides seek accommodation",
+            "The conflict is only viable in a narrow location",
+            "Catastrophic cost of losing a direct showdown",
+            "Each thinks theyll win without further exertion",
+            "They expect a better opening to appear soon",
+            "Former ties of friendship or family restrain them",
+            "Religious principles are constraining them",
+            "One sides still licking their wounds after a failure",
+            "Theyre building up force to make sure they win",
+            "Their cultural context makes open struggle hard",
+            "They expect an outside power to hand them a win",
+            "Theyre still searching for a way to get at their goal",
+            "One side mistakenly thinks theyve already won",
+            "A side is busy integrating a recent success",
+            "An outside power threatens both sides"
+        ],
+        "twists": [
+            "Theres a very sharp time limit for any resolution",
+            "The sympathetic side is actually a bunch of bastards",
+            "Theres an easy but very repugnant solution to hand",
+            "PC success means a big benefit to a hostile group",
+            "The real bone of contention is hidden from most",
+            "A sympathetic figures on an unsympathetic side",
+            "Theres a profitable chance for PCs to turn traitor",
+            "The “winner” will actually get in terrible trouble",
+            "Theres a very appealing third party in the mix",
+            "The PCs could really profit off the focus of the strife",
+            "The PCs are mistaken for an involved group",
+            "Somebody plans on screwing over the PCs",
+            "Both sides think the PCs are working for them",
+            "A side wants to use the PCs as a distraction for foes",
+            "The PCs main contact is mistrusted by their allies",
+            "If the other side cant get it, theyll destroy it",
+            "The focus isnt nearly as valuable as both sides think",
+            "The focus somehow has its own will and goals",
+            "Victory will drastically change one of the sides",
+            "Actually, there is no twist. Its all exactly as it seems."
+        ]
+    },
+    "conflictType": {
+        "money": {
+            "overallSituation": [
+                "Money is owed to a ruthless creditor",
+                "Money was stolen from someone",
+                "A sudden profit opportunity arises",
+                "Theres a hidden stash of wealth",
+                "Money is offered from an evil source"
+            ],
+            "specificFocus": [
+                "Organized crime wants it",
+                "Corrupt officials want it",
+                "A sympathetic NPC needs it",
+                "The PCs are owed it",
+                "It will disappear very soon"
+            ]
+        },
+        "revenge": {
+            "overallSituation": [
+                "Someone was murdered",
+                "Someone was stripped of rank",
+                "Someone lost all their wealth",
+                "Someone lost someones love",
+                "Someone was framed for a crime"
+            ],
+            "specificFocus": [
+                "It was wholly justified",
+                "The wrong person is targeted",
+                "The reaction is excessive",
+                "The PCs are somehow blamed",
+                "Both sides were wronged"
+            ]
+        },
+        "power": {
+            "overallSituation": [
+                "An influential political leader",
+                "A stern community elder",
+                "A ruling patriarch of a large family",
+                "A star expert in a particular industry",
+                "A criminal boss or outcast leader"
+            ],
+            "specificFocus": [
+                "Theyve betrayed their own",
+                "Someones gunning for them",
+                "They made a terrible choice",
+                "They usurped their position",
+                "Theyre oppressing their own"
+            ]
+        },
+        "naturalDanger": {
+            "overallSituation": [
+                "A cyclical planetary phenomenon",
+                "A sudden natural disaster",
+                "Sudden loss of vital infrastructure",
+                "Catastrophe from outside meddling",
+                "Formerly-unknown planetary peril"
+            ],
+            "specificFocus": [
+                "Anti-helpful bureaucrats",
+                "Religious zealots panic",
+                "Bandits and looters strike",
+                "The government hushes it up",
+                "Theres money in exploiting it"
+            ]
+        },
+        "religion": {
+            "overallSituation": [
+                "Sects that hate each other bitterly",
+                "Zealot reformers forcing new things",
+                "Radical traditionalists fighting back",
+                "Ethnic religious divisions",
+                "Corrupt and decadent institutions"
+            ],
+            "specificFocus": [
+                "Charismatic new leader",
+                "Mandatory state religion",
+                "Heavy foreign influence",
+                "Religious purging underway",
+                "Fighting for holy ground"
+            ]
+        },
+        "ideology": {
+            "overallSituation": [
+                "A universally-despised fringe group",
+                "Terrorists with widespread support",
+                "A political partys goon squads",
+                "Dead-end former regime supporters",
+                "Ruthless ascendant political group"
+            ],
+            "specificFocus": [
+                "Terrorist attack",
+                "Street rioting",
+                "Police state crackdown",
+                "Forced expulsions",
+                "Territory under hostile rule"
+            ]
+        },
+        "ethnicity": {
+            "overallSituation": [
+                "A traditionally subordinate group",
+                "An ethnic group from offworld",
+                "A dominant caste or ethnicity",
+                "An alien or transhuman group",
+                "Two groups that hate each other"
+            ],
+            "specificFocus": [
+                "Forced immigration",
+                "Official ethnic ghettos",
+                "Rigid separation of groups",
+                "8 Group statuses have changed",
+                "Rising ethnic violence"
+            ]
+        },
+        "resources": {
+            "overallSituation": [
+                "Theres a cache of illegal materials",
+                "A hidden strike of rare resources",
+                "Cargo has been abandoned as lost",
+                "Land ownership is disputed",
+                "A resource is desperately necessary"
+            ],
+            "specificFocus": [
+                "Someone thinks they own it",
+                "The state is looking for it",
+                "It has its own protectors",
+                "Rights to it were stolen",
+                "Offworlders want it badly"
+            ]
+        }
+    },
+    "npc": {
+        "initManner": [
+            "Ingratiating and cloying",
+            "Grim suspicion of the PCs or their backers",
+            "Xenophilic interest in the novelty of the PCs",
+            "Pragmatic and businesslike",
+            "Romantically interested in one or more PCs",
+            "A slimy used-gravcar dealers approach",
+            "Wide-eyed awe at the PCs",
+            "Cool and superior attitude toward PC “hirelings”",
+            "Benevolently patronizing toward outsiders",
+            "Sweaty-palmed need or desperation",
+            "Xenophobic mistrust of the PCs",
+            "Idealistic enthusiasm for a potentially shared cause",
+            "Somewhat intoxicated by recent indulgence",
+            "Smoothly persuasive and reasonable",
+            "Visibly uncomfortable with the PCs",
+            "Grossly overconfident in PC abilities",
+            "Somewhat frightened by the PCs",
+            "Deeply misunderstanding the PCs culture",
+            "Extremely well-informed about the PCs past",
+            "Distracted by their current situation"
+        ],
+        "defaultDealOutcome": [
+            "Theyll screw the PCs over even at their own cost",
+            "They firmly intend to actively betray the PCs",
+            "They wont keep the deal unless driven to it",
+            "They plan to twist the deal to their own advantage",
+            "They wont keep their word unless its profitable",
+            "Theyll flinch from paying up when the time comes",
+            "They mean to keep the deal, but are reluctant",
+            "Theyll keep most of the deal, but not all of it",
+            "Theyll keep the deal slowly and grudgingly",
+            "Theyll keep the deal but wont go out of their way",
+            "Theyll be reasonably punctual about the deal",
+            "Theyll want a further small favor to pay up on it",
+            "Theyll keep the deal in a way that helps them",
+            "Theyll keep the deal if its still good for them",
+            "Theyll offer a bonus for an additional favor",
+            "Trustworthy as long as the deal wont hurt them",
+            "Trustworthy, with the NPC following through",
+            "Theyll be very fair in keeping to their agreements",
+            "Theyll keep bargains even to their own cost",
+            "Complete and righteous integrity to the bitter end"
+        ],
+        "motivation": [
+            "An ambition for greater social status",
+            "Greed for wealth and indulgent riches",
+            "Protect a loved one who is somehow imperiled",
+            "A sheer sadistic love of inflicting pain and suffering",
+            "Hedonistic enjoyment of pleasing company",
+            "Searching out hidden knowledge or science",
+            "Establishing or promoting a cultural institution",
+            "Avenging a grievous wrong to them or a loved one",
+            "Promoting their religion and living out their faith",
+            "Winning the love of a particular person",
+            "Winning glory and fame in their profession",
+            "Dodging an enemy who is pursuing them",
+            "Driving out or killing an enemy group",
+            "Deposing a rival to them in their line of work",
+            "Getting away from this world or society",
+            "Promote a friend or offsprings career or future",
+            "Taking control of a property or piece of land",
+            "Building a structure or a complex prototype tech",
+            "Perform or create their art to vast acclaim",
+            "Redeem themselves from a prior failure"
+        ],
+        "want": [
+            "Bring them an exotic piece of tech",
+            "Convince someone to meet with the NPC",
+            "Kill a particular NPC",
+            "Kidnap or non-fatally eliminate a particular NPC",
+            "Pay them a large amount of money",
+            "Take a message to someone hard to reach",
+            "Acquire a tech component thats hard to get",
+            "Find proof of a particular NPCs malfeasance",
+            "Locate a missing NPC",
+            "Bring someone to a destination via dangerous travel",
+            "Retrieve a lost or stolen object",
+            "Defend someone from an impending attack",
+            "Burn down or destroy a particular structure",
+            "Explore a dangerous or remote location",
+            "Steal something from a rival NPC or group",
+            "Intimidate a rival into ceasing their course of action",
+            "Commit a minor crime to aid the NPC",
+            "Trick a rival into doing something",
+            "Rescue an NPC from a dire situation",
+            "Force a person or group to leave an area"
+        ],
+        "power": [
+            "Theyre just really appealing and sympathetic to PCs",
+            "They have considerable liquid funds",
+            "They control the use of large amounts of violence",
+            "They have a position of great social status",
+            "Theyre a good friend of an important local leader ",
+            "They have blackmail info on the PCs",
+            "They have considerable legal influence here",
+            "They have tech the PCs might reasonably want",
+            "They can get the PCs into a place they want to go",
+            "They know where significant wealth can be found",
+            "They have information about the PCs current goa",
+            "An NPC the PCs need has implicit trust in them",
+            "The NPC can threaten someone the PCs like",
+            "They control a business relevant to PC needs",
+            "They have considerable criminal contacts",
+            "They have pull with the local religion",
+            "They know a great many corrupt politicians",
+            "They can alert the PCs to an unexpected peril",
+            "Theyre able to push a goal the PCs currently have",
+            "They can get the PCs useful permits and rights"
+        ],
+        "hook": [
+            "A particular odd style of dress",
+            "An amputation or other maiming",
+            "Visible cyberware or prosthetics",
+            "Unusual hair, skin, or eye colors",
+            "Scarring, either intentional or from old injuries",
+            "Tic-like overuse of a particular word or phrase",
+            "Specific unusual fragrance or cologne",
+            "Constant fiddling with a particular item",
+            "Visible signs of drug use",
+            "Always seems to be in one particular mood",
+            "Wears badges or marks of allegiance to a cause",
+            "Extremely slow or fast pace of speech",
+            "Wheezes, shakes, or other signs of infirmity",
+            "Constantly with a drink to hand",
+            "Always complaining about a group or organization",
+            "Paranoid, possibly for justifiable reasons",
+            "Insists on a particular location for all meetings",
+            "Communicates strictly through a third party",
+            "Abnormally obese, emaciated, tall, or short",
+            "Always found with henchmen or friends"
+        ]
+    },
+    "places": {
+        "rewards": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "civilizedOngoings": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "wildernessOngoings": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "hazard": {
+            "social": {
+                "Specific_Example": [],
+                "Possible_Danger": []
+            },
+            "legal": {
+                "Specific_Example": [],
+                "Possible_Danger": []
+            },
+            "environmental": {
+                "Specific_Example": [],
+                "Possible_Danger": []
+            },
+            "trap": {
+                "Specific_Example": [],
+                "Possible_Danger": []
+            },
+            "animal": {
+                "Specific_Example": [],
+                "Possible_Danger": []
+            },
+            "sentient": {
+                "Specific_Example": [],
+                "Possible_Danger": []
+            },
+            "decay": {
+                "Specific_Example": [],
+                "Possible_Danger": []
+            },
+            "PC-induced": {
+                "Specific_Example": [],
+                "Possible_Danger": []
+            }
+        }
+    },
+    "urbanEncounters": {
+        "generalVenue": [
+            "In the middle of the street",
+            "In a public plaza",
+            "Down a side alley",
+            "Inside a local business",
+            "Next to or in a public park",
+            "At a mass-transit station"
+        ],
+        "reasonInvolved": [
+            "A sympathetic participant appeals to them",
+            "Ways around it are all dangerous/blocked",
+            "It happens immediately around them",
+            "A valuable thing looks snatchable amid it",
+            "A participant offers a reward for help",
+            "Someone mistakenly involves the PCs in it",
+            "The seeming way out just leads deeper in",
+            "Responsibility is somehow pinned on them"
+        ],
+        "eventNature": [
+            "A parade or festival is being disrupted",
+            "Innocents are being assaulted",
+            "An establishment is being robbed",
+            "A disturbance over local politics happens",
+            "Someone is being blamed for something",
+            "Fires or building collapses are happening",
+            "A medical emergency is happening",
+            "Someones trying to cheat the PCs",
+            "A vehicle accident is happening",
+            "A religious ceremony is being disrupted"
+        ],
+        "conflict": [
+            "Money, extortion, payment due, debts",
+            "Respect, submission to social authority",
+            "Grudges, ethnic resentment, gang payback",
+            "Politics, religion, or other ideology"
+        ],
+        "antagonist": [
+            "A local bully and their thugs",
+            "A ruthless political boss and their zealots",
+            "Violent criminals",
+            "Religious fanatics",
+            "A blisteringly obnoxious offworlder",
+            "Corrupt or over-strict government official",
+            "A mob of intoxicated locals",
+            "A ranting demagogue and their followers",
+            "A stupidly bull-headed local grandee",
+            "A very capable assassin or strong-arm",
+            "A self-centered local scion of power",
+            "A confused foreigner or backwoodsman"
+        ],
+        "feature": [
+            "Heavy traffic running through the place",
+            "Music blaring at deafening volumes",
+            "Two groups present that detest each other",
+            "Large delivery taking place right there",
+            "Swarm of schoolkids or feral youth",
+            "Insistent soapbox preacher here",
+            "Several pickpockets working the crowd",
+            "A kiosk is tipping over and spilling things",
+            "Streetlights are out or visibility is low",
+            "A cop patrol is here and reluctant to act",
+            "PC-hostile reporters are recording here",
+            "Someones trying to sell something to PCs",
+            "Feral dogs or other animals crowd here",
+            "Unrelated activists are protesting here",
+            "Street kids are trying to steal from the PCs",
+            "GPS maps are dangerously wrong here",
+            "Downed power lines are a danger here",
+            "Numerous open manholes and utility holes",
+            "The streets blockaded by something",
+            "Crowds so thick one can barely move"
+        ]
+    },
+    "wildernessEncounters": {
+        "weatherLighting": [
+            "Takes place in daylight and clear weather",
+            "Daylight, but fog, mist, rain or the like",
+            "Daylight, but harsh seasonal weather",
+            "Night encounter, but clear weather",
+            "Night, with rain or other obscuring effects",
+            "Night, with terrible weather and wind"
+        ],
+        "nature": [
+            "Attack by pack of hostiles",
+            "Ambush by single lone hostile",
+            "Meet people who dont want to be met",
+            "Encounter people in need of aid",
+            "Encounter hostile creatures",
+            "Nearby feature is somehow dangerous",
+            "Nearby feature promises useful loot",
+            "Meet hostiles that arent immediately so"
+        ],
+        "friendlies": [
+            "Affable but reclusive hermit",
+            "Local herd animal let loose to graze",
+            "Government ranger or circuit judge",
+            "Curious local animal",
+            "Remote homesteader and family",
+            "Working trapper or hunter",
+            "Back-country villager or native",
+            "Hiker or wilderness tourist",
+            "Religious recluse or holy person",
+            "Impoverished social exile"
+        ],
+        "range": [
+            "Visible from a long distance away",
+            "Noticed 1d4 hundred meters away",
+            "Noticed only within 1d6 x 10 meters",
+            "Noticed only when adjacent to the event"
+        ],
+        "hostiles": [
+            "Bandits in their wilderness hideout",
+            "Dangerous locals looking for easy marks",
+            "Rabid or diseased large predator",
+            "Pack of hungry hunting beasts",
+            "Herd of potentially dangerous prey animals",
+            "Swarm of dangerous vermin",
+            "Criminal seeking to evade the law",
+            "Brutal local landowner and their men",
+            "Crazed hermit seeking enforced solitude",
+            "Friendly-seeming guide into lethal danger",
+            "Harmless-looking but dangerous beast",
+            "Confidence man seeking to gull the PCs"
+        ],
+        "feature": [
+            "Overgrown homestead",
+            "Steam prone to flash-flooding",
+            "Narrow bridge or beam over deep cleft",
+            "Box canyon with steep sides",
+            "Unstable hillside that slides if disturbed",
+            "Long-lost crash site of a gravflyer",
+            "Once-inhabited cave or tunnel",
+            "Steep and dangerous cliff",
+            "Quicksand-laden swamp or dust pit",
+            "Ruins of a ghost town or lost hamlet",
+            "Hunting cabin with necessities",
+            "Ill-tended graveyard of a lost family stead",
+            "Narrow pass thats easily blocked",
+            "Dilapidated resort building",
+            "Remote government monitoring outpost",
+            "Illicit substance farm or processing center",
+            "Old and forgotten battleground",
+            "Zone overrun by dangerous plants",
+            "Thick growth that lights up at a spark",
+            "Abandoned vehicle"
+        ]
+    },
+    "onerollNPC": {
+        "background": [
+            "The local underclass or poorest natives",
+            "Common laborers or cube workers",
+            "Aspiring bourgeoise or upper class",
+            "The elite of this society",
+            "Minority or foreigners; reroll on 1d4",
+            "Offworlders or exotics; reroll on 1d4"
+        ],
+        "role": [
+            "Criminal, thug, thief, swindler",
+            "Menial, cleaner, retail worker, servant",
+            "Unskilled heavy labor, porter, construction",
+            "Skilled trade, electrician, mechanic, pilot",
+            "Idea worker, programmer, writer",
+            "Merchant, business owner, trader, banker",
+            "Official, bureaucrat, courtier, clerk",
+            "Military, soldier, enforcer, law officer"
+        ],
+        "problem": [
+            "They have significant debt or money woes",
+            "A loved one is in trouble; reroll for it",
+            "Romantic failure with a desired person",
+            "Drug or behavioral addiction",
+            "Their superior dislikes or resents them",
+            "They have a persistent sickness",
+            "They hate their job or life situation",
+            "Someone dangerous is targeting them",
+            "Theyre pursuing a disastrous purpose",
+            "They have no problems worth mentioning"
+        ],
+        "age": [
+            "Unusually young or old for their role",
+            "Young adult",
+            "Mature prime",
+            "Middle-aged or elderly"
+        ],
+        "desire": [
+            "They want a particular romantic partner",
+            "They want money for them or a loved one",
+            "They want a promotion in their job",
+            "They want answers about a past trauma",
+            "They want revenge on an enemy",
+            "They want to help a beleaguered friend",
+            "They want an entirely different job",
+            "They want protection from an enemy",
+            "They want to leave their current life",
+            "They want fame and glory",
+            "They want power over those around them",
+            "They have everything they want from life"
+        ],
+        "trait": [
+            "Ambition",
+            "Avarice",
+            "Bitterness",
+            "Courage",
+            "Cowardice",
+            "Curiosity",
+            "Deceitfulness",
+            "Determination",
+            "Devotion to a cause",
+            "Filiality",
+            "Hatred",
+            "Honesty",
+            "Hopefulness",
+            "Love of a person",
+            "Nihilism",
+            "Paternalism",
+            "Pessimism",
+            "Protectiveness",
+            "Resentment",
+            "Shame"
+        ]
+    }
+}
