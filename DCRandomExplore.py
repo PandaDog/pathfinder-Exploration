@@ -26,20 +26,21 @@ import easygui
 
 # Wanna add a fun weather? Add it here!
 WEATHERS = {
-    ("Thirty-three degrees. Clear blue skies despite the cold.", 7),
-    ("Sixty-six degrees. Warm sunny day with a pleasant breeze.", 8),
-    ("Fifty-nine degrees. Very warm day, partly cloudy.", 8),
-    ("Normal Day", 20),
-    ("Heavy Fog rolls around you. Take a -1 on Perception checks", 3),
+    ("Thirty-three degrees. Clear blue skies despite the cold.", 15),
+    ("Sixty-six degrees. Warm sunny day with a pleasant breeze.", 10),
+    ("Fifty-nine degrees. Very warm day, partly cloudy.", 10),
+    ("Negative Five degrees, all water has a sheet of ice on it. Make a fortitude save", 5),
+    ("Heavy Fog rolls around you. Take a -1 on Perception checks. Ranged attacks incur a -2 penalty to hit", 8),
     ("Cold day. You see your breath as you exhale.", 7),
-    ("The sky is dark and looks like a storm is coming.", 5),
+    ("The sky is dark and looks like a storm is coming as it blocks out the sun. Treat day encounters as if nighttime.", 10),
     ("Snowstorm, Treat all terrain as difficult terrain.", 8),
     ("Blizzard! Treat all terrain as difficult terrain. This snow is heavy and wet and soaks through your clothing. Roll a fortitude save", 5),
 }
 
 # Wanna add a new terrain? Add it here!
-TERRAINS = {("STANDARD", 40),
-            ("Swamp/Marsh", 5),
+TERRAINS = {("STANDARD", 20),
+            ("Forest", 10),
+            ("Swamp/Marsh", 8),
             ("DIFFICULT TERRAIN", 8),
             ("Mountain", 8),
             ("Minor Point of Interest", 3),
@@ -52,7 +53,7 @@ ENCOUNTER_TYPE = {
     ("Nothing", 50),
     ("Faction/NonCombat Encounter", 10),
     ("Point of Interest", 10),
-    ("Secret", 5),
+    ("Secret/Rumor", 5),
 }
 
 FACTION_TYPE = {
@@ -211,8 +212,9 @@ def Travel_UnExplored():
 
 def Create_Day_Writeup_Unexplored(Weather, Terrain, Encounters):
     print("---------------------------------------------------------------------------------------")
-    print(Weather)
-    print(Terrain)
+    print(Weather[0])
+    print(Terrain[0])
+    Generate_Roll20_Macro_Complete(Weather[0], Terrain[0])
     if(Encounters != 0):
         print("ENCOUNTERS!")
         print(Encounters)
@@ -221,7 +223,8 @@ def Create_Day_Writeup_Unexplored(Weather, Terrain, Encounters):
 
 def Create_Day_Writeup_Explored(Weather, Encounters):
     print("---------------------------------------------------------------------------------------")
-    print(Weather)
+    print(Weather[0])
+    Generate_Roll20_Macro_Complete(Weather[0], "Explored")
     if(Encounters != 0):
         print("ENCOUNTERS!")
         print(Encounters)
@@ -260,7 +263,10 @@ def Handle_Encounters(NumberOfEncounters, terrain):
         return Encounters
 
     else:
-        return Select_Event(ENCOUNTER_TYPE)
+        NonComboEvent = Select_Event(ENCOUNTER_TYPE)
+        if(NonComboEvent[0] == "Secret/Rumor"):
+            NonComboEvent = Select_Event(MAJOR_RUMORS)
+        return NonComboEvent
 
 
 def Handle_Unexplored():
