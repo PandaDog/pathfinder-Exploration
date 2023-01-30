@@ -16,16 +16,15 @@ WEATHERS = {
 TERRAINS = {("STANDARD", 20),
             ("Forest", 10),
             ("Swamp/Marsh", 8),
-            ("Mountain", 8),
-            ("Minor Point of Interest", 3),
-            ("Secret", 3)}
+            ("Mountain", 8)
+            }
 
 
 ENCOUNTER_TYPE = {
-    ("Major Entity", 10),
+    ("Major Entity [Faction Encounter]", 10),
     ("Nothing", 30),
-    ("Faction/NonCombat Encounter", 10),
-    ("Point of Interest", 10),
+    ("NonCombat Encounter", 10),
+    ("Point of Interest", 5),
     ("Secret/Rumor", 5),
 }
 
@@ -87,6 +86,28 @@ INQUISITION_ENCOUNTER = {}
 
 IMPERIAL_ENCOUNTER = {}
 
+POINTS_OF_INTEREST = {
+    (("Miriam's Stump When a powerful druid met her end, a giant tree sprang up where she fell. Around the tree of life, the menhirs were placed, an everlasting circle of guardians to honor the druid. Today, the tree has been cut down. Great power still lingers here."), 2),
+    (("Jasper's Circle The witches of old gathered here. Newer generations of wicca have tried to understand its secrets, but any who attempt to gather here suffer a terrible curse."), 2),
+    (("Roots of the Woolcomber The roots of an ancient tree that once stood hundreds of feet tall. They wind and weave their way deep into the earth beneath. At night, the wisps gather round."), 2),
+    (("Gravestone of the Book Once long ago, an entire town was killed by a plague. An alien race felt the tragedy and responded, creating a cemetery and burying the entire town. In time, the cemetery was lost to our mortal plane. No one travels there now, or remembers who created it."), 2),
+    (("Cottage of the Woolcomber Jack used to have a family. Now Jack has no family. He sits alone at his cottage and never comes out, except to chop wood for the fire or go ice fishing."), 2),
+    (("The Taupe Cottage In a rugged landscape, this cottage appears as a bastion of warmth and shelter. If you convince the owner to let you rest there, you will learn something important about your journey. The owner is never wrong."), 2),
+    (("Glowing Grotto The plants in this cave glow at all tiems of day and night. Some say they have special medical properties"), 2),
+    (("Shrine of the Poet This shrine is easy to find. Many pilgrims make their way through here. It has a secret that someone with the lore can relate. The shrine sits upon the back of a hidden guardian."), 2),
+    (("The Spring Pool Friends and lovers come to this pool to watch the water tumble out from the mountain. Something about it calms the mind, and promotes spiritual reflection."), 2),
+    (("Cave of the Boa Dark deeds. Dark shadows. Dark magicks. Dare not enter the lair of the necromancers, lest you become their undead servant."), 2),
+    (("Farm of the Conman On the way to the mountain, you must pass through the village. It has a thriving trade, and the people seem healthy enough, but you notice a strange silence. Why do the people not talk more?"), 2),
+    (("Clearing of the Gun Wherever desperate adventurer's need it most, the camp seems to appear. Some say it's a mirage - like a desert oasis - which provides only the illusion of sustenance. Others swear it is the only reason they still live."), 2),
+    (("Bottomless Chasm Crossing The chasm is so deep here that everyone agrees it has no bottom. Why there is only one, small bridge to cross is not known. Those who built the bridge are long forgotten."), 2),
+    (("Snake Cavern A giant snake dug out this network of caves. After it's demise it became the home of an eccentric necromancer. Many believe he is too dangerous to approach, but a careful observer would notice that forest creatures don't avoid the cave."), 2),
+    (("River of the Fief Stagnant river water flows backwards into the area, exposing the red earth beneath. Many have gone missing here. Everyone avoids it."), 2),
+    (("Gowen's Pit The pit appears as a blight on the landscape in the middle of nowhere. It's many miles from any sort of settlement. And yet, year after year, about a dozen people fall inside of it. How is this possible, when it should be so easy to stay away?"), 2),
+    (("The Wolf's Skull A giant skull, impossibly large, has become the entranceway to a deep network of caves. The caves are now the lair of many dangerous creatures. No one knows what type of creature the skull came from."), 2),
+    (("Crashed Zeppelin: Dubbed the Iris. It took many meetings, backroom conversations, and rounds of approvals, but the Steel Ministry was finally able to agree that some control of the skies would benefit their board members. They used their considerable wealth to hire the best inventor in all the land, and this was the result."), 2),
+    (("You find the skeleton of a giant humanoid with a large blade shoved in its ribcage."), 2)
+}
+
 MAJOR_RUMORS = {
     (("Reports of children being lured into the forest by short, goat-legged men have grown rampant. Any satyr questioned about this claims to not know about it and divination magic confirms they are telling the truth."), 1),
     (("A travelling circus has recently shown up in the town. Promising festivities for the locals but has caused increased suspicion from the local guard and town magistrate due to advertisements of dangerous beasts as one of the many attractions."), 1),
@@ -111,6 +132,9 @@ MAJOR_RUMORS = {
     (("An ancient elf welcomes all who make it to his shanty in the forest, happily selling and exchanging magic items with them. Part of the deal always includes the customer giving up something they love or there is no deal."), 1),
     (("The land throughout the forest rips and tears, revealing a river of lava that now flows through. Fire elementals make their way out attacking the forest and its inhabitant, but water, wind, and earth elementals fight back against their fiery kin."), 1),
     (("A man is seen gracefully dancing on water as though it were land. Suddenly, a clawed hand reaches up out of the water and grabs him down by the leg and he screams out in horror."), 1),
+}
+
+NON_COMBAT_ENCOUNTERS = {
     (("A flutter of crimson butterflies blocks the dirt path to the creek, going into a maddening frenzy whenever someone approaches. Suddenly, the butterflies then open and close their wings, spelling out the word “Teeth” before flying away."), 2),
     (("The local alchemist has been discarding expired potion bottles by mixing them into his garden compost and dumping them into the stagnant pond behind his house. Not only are the crops gigantic, but the pond’s surface is a thick sludge. Now a large bubble is rising to the surface…"), 2),
     (("in the middle of a deep forest, a well sits among what appears to have once been a lovely glade. Now, the trees around it are dying and rotting on the spot, and light appears to struggle to reach the glade."), 2),
@@ -197,5 +221,5 @@ MAJOR_RUMORS = {
     (("A group of bandits rushes into town. Turns out, while waiting to ambush hapless travelers, THEY got ambushed! Are they worth helping out?"), 2),
     (("A little girl is watching you from the trees. The next time you glance over, you see a wolf run away."), 2),
     (("The trees have linked their branches together in a network fashion, and they’re sending communications incredibly quickly throughout the forest. Some people want to take advantage of this new development."), 2),
-    (("A worn rope hangs down from one of the tallest trees in the forest. It seems sturdy enough…"), 2),
+    (("A worn rope hangs down from one of the tallest trees in the forest. It seems sturdy enough…"), 2)
 }

@@ -137,8 +137,16 @@ def Handle_Encounters(NumberOfEncounters, terrain):
         NonComboEvent = Select_Event(WeightedTables.ENCOUNTER_TYPE)
 
         eventType = NonComboEvent[0]
-        if(eventType == "Secret/Rumor" or terrain == "Forest"):
+
+        if(eventType == "Secret/Rumor"):
+            print("Secret BELOW")
             NonComboEvent = Select_Event(WeightedTables.MAJOR_RUMORS)
+        if(eventType == "NonCombat Encounter"):
+            print("NonCombat Encounter BELOW")
+            NonComboEvent = Select_Event(WeightedTables.NON_COMBAT_ENCOUNTERS)
+        if(eventType == "Point of Interest"):
+            print("Point of Interest BELOW")
+            NonComboEvent = Select_Event(WeightedTables.POINTS_OF_INTEREST)
 
         return NonComboEvent
 
