@@ -78,6 +78,15 @@ LEVEL_3_FIGHT_MEDIUM = {
     ("1 Cave Giant", 1),
 }
 
+FACTION_ENCOUNTER = {
+    ("Cult", 10),
+    ("Sons", 10),
+    ("Inquisition", 10),
+    ("Imperial", 10),
+    ("Fey", 10),
+    ("Aberrant", 1),
+}
+
 CULT_ENCOUNTER = {}
 
 SONS_ENCOUNTER = {}

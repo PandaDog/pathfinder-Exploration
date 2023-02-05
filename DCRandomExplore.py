@@ -4,11 +4,6 @@ __version__ = 0.1
 __copyright__ = "All Rights Reserved"
 __email__ = "rgmckay@nevada.unr.edu"
 
-# TODO
-# 1. Change lists to a txt file to ease editing
-# 2  Create output macro to insert Roll20 of the events (Excluding encounters)
-# 3  Enable unique party support, user supplies list of party names so output is more streamlined
-# 4  Develop the Dark Souls experience
 
 ##IMPORTS##
 import sys
@@ -25,7 +20,7 @@ import easygui
 import UnweightedTables
 import WeightedTables
 import printart
-
+import openai
 
 # Main Function
 
